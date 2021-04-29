@@ -12,17 +12,17 @@ public class B7 extends Actor
      * Act - do whatever the B7 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    ParOuImpar butao;
-    ParOuImpar velo;
     public void act() 
     {
-        if(Greenfoot.isKeyDown("7")){
-          setLocation(243, 302);
-          velo.v++;
-          if(velo.v == 4){
-            butao.r += "7";
-            velo.v = -4;         
-          }
-        }else{setLocation(241, 300);}
+        if(Greenfoot.mouseClicked(this) && Mundo.op.equals(""))
+        {
+            setLocation(167, 405);
+            Mundo.num1 += "7";
+        }
+        else if(Greenfoot.mouseClicked(this) && !Mundo.op.equals(""))
+        {
+            setLocation(167, 405);
+            Mundo.num2 += "7";
+        }else {setLocation(165, 403);}
     }    
 }
